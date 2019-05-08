@@ -7,7 +7,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.HashMap;
 import java.util.regex.Matcher;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -20,27 +19,27 @@ public class Main {
 	static String key="AJTUPL59H6NMOMYH";
 
 	public static void main(String[] args) {
-
 		Stockbag bag=new Stockbag();
 		DoublyLinkedList Linklist=new DoublyLinkedList();
 		String str=GetJsonString("TSLA");
 		
 		
-		//System.out.println(str);
-	
+		System.out.println(str);
+		ObjectMapper mapper=new ObjectMapper();
 		
 		
 		try {
-				ObjectMapper mapper=new ObjectMapper();
 				bag = mapper.readValue(str.toString(), Stockbag.class);
-		} catch (Exception e) {
+									} catch (JsonParseException e) {
 										// TODO Auto-generated catch block
-				e.printStackTrace();
-		}
-		HashMap<Integer,Stock> map=new HashMap<>(bag.stocklist.size()*2);
-		
-		
-		
+										e.printStackTrace();
+									} catch (JsonMappingException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									} catch (IOException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
 								
 		for(int i=0;i<bag.stocklist.size();i++) {
 			Stock stock=new Stock(bag.stocklist.get(i).Stringdate,
@@ -50,11 +49,8 @@ public class Main {
 								  bag.stocklist.get(i).Stringclose,
 								  bag.stocklist.get(i).Stringvolume
 								  );
-			map.put(i,stock);
+			Linklist.insertLast(stock);
 		}
-		
-		System.out.println(map.size());
-		
 		
 		//Linklist.displayForward();
 		
@@ -90,13 +86,14 @@ public class Main {
 			while ((inputLine=in.readLine())!=null) {
 				
 				
-				if(isValidDate(inputLine.replaceAll("\"", ""))) {	//changes format from  "2019-04-22":{ -> "{ \n "0. date":2018-11-29
+				if(isValidDate(inputLine.replaceAll("\"", ""))) {	//changes format from  "2019-04-22":{ -> "{ \n date":2018-11-29
 					inputLine=inputLine.replaceAll("\"", "");
 					inputLine=inputLine.replaceAll("\\: \\{", "");
 					inputLine=inputLine.replaceAll("\\s+", "");	
 					inputLine= "        {\n            \"0. date\":"+"\""+inputLine+"\",";
 					//2019-04-22": { -> {
 					//2019-04-22"  -> date:	
+			    
 				}
 				
 				if(inputLine.equals(bracketTochange))
@@ -114,6 +111,9 @@ public class Main {
 		e.printStackTrace();
 		}
 		return str;
+		
+		
+		
 		
 		
 	}

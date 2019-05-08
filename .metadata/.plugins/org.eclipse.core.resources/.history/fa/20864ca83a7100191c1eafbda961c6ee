@@ -7,7 +7,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.HashMap;
 import java.util.regex.Matcher;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -17,30 +16,28 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Main {
 	//checking if git works
-	static String key="AJTUPL59H6NMOMYH";
 
 	public static void main(String[] args) {
-
 		Stockbag bag=new Stockbag();
 		DoublyLinkedList Linklist=new DoublyLinkedList();
-		String str=GetJsonString("TSLA");
+		String str=GetJsonString();
 		
 		
-		//System.out.println(str);
-	
+		ObjectMapper mapper=new ObjectMapper();
 		
 		
 		try {
-				ObjectMapper mapper=new ObjectMapper();
 				bag = mapper.readValue(str.toString(), Stockbag.class);
-		} catch (Exception e) {
+									} catch (JsonParseException e) {
 										// TODO Auto-generated catch block
-				e.printStackTrace();
-		}
-		HashMap<Integer,Stock> map=new HashMap<>(bag.stocklist.size()*2);
-		
-		
-		
+										e.printStackTrace();
+									} catch (JsonMappingException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									} catch (IOException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
 								
 		for(int i=0;i<bag.stocklist.size();i++) {
 			Stock stock=new Stock(bag.stocklist.get(i).Stringdate,
@@ -50,11 +47,8 @@ public class Main {
 								  bag.stocklist.get(i).Stringclose,
 								  bag.stocklist.get(i).Stringvolume
 								  );
-			map.put(i,stock);
+			Linklist.insertLast(stock);
 		}
-		
-		System.out.println(map.size());
-		
 		
 		//Linklist.displayForward();
 		
@@ -62,16 +56,19 @@ public class Main {
 	
 	
 	
-	public static String GetJsonString(String Stocksymbol)
+	public static String GetJsonString()
 	{
 		String str="nothing";
 	
 		try {
-			String symbol=Stocksymbol;	//options Any stock's symbol 
+			String key="AJTUPL59H6NMOMYH";
+			String symbol="TSLA";	//options Any stock's symbol 
+			String outputsize="full";	//options 'compact','full'
+			
 //   https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=TSLA&interval=5min&apikey=AJTUPL59H6NMOMYH&outputsize=compact
 			String url="https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+symbol+
 			"&interval=5min&apikey="+key+ 
-			"&outputsize=compact";
+			"&outputsize="+outputsize;
 			
 			URL obj=new URL(url);
 			HttpURLConnection con=(HttpURLConnection)obj.openConnection();
@@ -84,21 +81,21 @@ public class Main {
 					
 			String inputLine;
 			StringBuffer response=new StringBuffer();
-
+			int datenum=0;
 			
 			String bracketTochange="    }";
 			while ((inputLine=in.readLine())!=null) {
 				
 				
-				if(isValidDate(inputLine.replaceAll("\"", ""))) {	//changes format from  "2019-04-22":{ -> "{ \n "0. date":2018-11-29
+				if(isValidDate(inputLine.replaceAll("\"", ""))) {	//changes format from  "2019-04-22":{ -> "{ \n date":2018-11-29
 					inputLine=inputLine.replaceAll("\"", "");
 					inputLine=inputLine.replaceAll("\\: \\{", "");
 					inputLine=inputLine.replaceAll("\\s+", "");	
 					inputLine= "        {\n            \"0. date\":"+"\""+inputLine+"\",";
 					//2019-04-22": { -> {
 					//2019-04-22"  -> date:	
+			    
 				}
-				
 				if(inputLine.equals(bracketTochange))
 				inputLine="    ]";
 				
@@ -110,13 +107,57 @@ public class Main {
 			
 			str=str.replace("\"Time Series (Daily)\": {", "\"Stockbag\": [");
 		
+//	
+			System.out.println(str);
+		
+		
+
 		}catch(Exception e) {
 		e.printStackTrace();
 		}
 		return str;
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

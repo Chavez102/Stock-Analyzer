@@ -53,7 +53,7 @@ public class Main {
 			map.put(i,stock);
 		}
 		
-		System.out.println(map.size());
+		
 		
 		
 		//Linklist.displayForward();
@@ -90,13 +90,14 @@ public class Main {
 			while ((inputLine=in.readLine())!=null) {
 				
 				
-				if(isValidDate(inputLine.replaceAll("\"", ""))) {	//changes format from  "2019-04-22":{ -> "{ \n "0. date":2018-11-29
+				if(isValidDate(inputLine.replaceAll("\"", ""))) {	//changes format from  "2019-04-22":{ -> "{ \n date":2018-11-29
 					inputLine=inputLine.replaceAll("\"", "");
 					inputLine=inputLine.replaceAll("\\: \\{", "");
 					inputLine=inputLine.replaceAll("\\s+", "");	
 					inputLine= "        {\n            \"0. date\":"+"\""+inputLine+"\",";
 					//2019-04-22": { -> {
 					//2019-04-22"  -> date:	
+			    
 				}
 				
 				if(inputLine.equals(bracketTochange))
@@ -114,6 +115,9 @@ public class Main {
 		e.printStackTrace();
 		}
 		return str;
+		
+		
+		
 		
 		
 	}
