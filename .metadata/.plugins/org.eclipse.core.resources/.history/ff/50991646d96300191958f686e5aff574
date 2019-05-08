@@ -1,0 +1,41 @@
+package main;
+
+public class Meta {
+	String Information;
+	String Symbol;
+	String LastRefreshed;
+	String OutputSize;
+	String TimeZone;
+
+	public String getInformation() {
+		return Information;
+	}
+	public void setInformation(String information) {
+		Information = information;
+	}
+	public String getSymbol() {
+		return Symbol;
+	}
+	public void setSymbol(String symbol) {
+		Symbol = symbol;
+	}
+	public String getLastRefreshed() {
+		return LastRefreshed;
+	}
+	public void setLastRefreshed(String lastRefreshed) {
+		LastRefreshed = lastRefreshed;
+	}
+	public String getOutputSize() {
+		return OutputSize;
+	}
+	public void setOutputSize(String outputSize) {
+		OutputSize = outputSize;
+	}
+	public String getTimeZone() {
+		return TimeZone;
+	}
+	public void setTimeZone(String timeZone) {
+		TimeZone = timeZone;
+	}
+
+}

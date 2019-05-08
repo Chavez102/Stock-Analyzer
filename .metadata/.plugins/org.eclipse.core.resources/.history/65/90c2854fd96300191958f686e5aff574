@@ -1,0 +1,23 @@
+package main;
+
+import java.util.List;
+
+import org.codehaus.jackson.annotate.JsonIgnore;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+public class Stockbag {
+	@JsonIgnore MetaData  metaData;
+	List<Stock> stocklist;
+	
+	public Stockbag()
+	{}
+	
+	public List<Stock>getStocks(){
+		return stocklist;
+	}
+	
+	public void setStocks(List<Stock> stock) {
+		this.stocklist=stock;
+	}
+}

@@ -1,0 +1,75 @@
+package main;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+
+
+
+
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			String key="AJTUPL59H6NMOMYH";
+			String symbol="TSLA";	//options Any stock's symbol 
+			String outputsize="compact";	//options 'compact','full'
+			
+//"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=TSLA&interval=5min&apikey=AJTUPL59H6NMOMYH&outputsize=compact
+			String url="https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+symbol+
+			"&interval=5min&apikey="+key+ 
+			"&outputsize="+outputsize;
+			
+			URL obj=new URL(url);
+			HttpURLConnection con=(HttpURLConnection)obj.openConnection();
+			
+			con.setRequestMethod("GET");
+			con.setRequestProperty("User-Agent", "Mozilla/5.0");
+			
+			BufferedReader in= new BufferedReader(
+					new InputStreamReader(con.getInputStream()));
+					
+			String inputLine;
+			StringBuffer response=new StringBuffer();
+			while ((inputLine=in.readLine())!=null) {
+				response.append(inputLine+"\n");
+				
+				
+			}
+			in.close();
+			
+			//System.out.println(response.toString());
+			//System.out.println("\n///////////////////////////////////////////////////////////////////////////////////////////");
+			String str=response.toString().replaceAll("1. ", "");
+				str=str.replaceAll("2.", "");
+			
+				str=str.replaceAll("3. ", "");
+				str=str.replaceAll("4. ", "");
+				str=str.replaceAll("5. ", "");
+				//str=response.toString().replaceAll("\\s+", "");	
+			
+			System.out.println(str);
+				
+			ObjectMapper mapper=new ObjectMapper();
+			Stockbag bag=new Stockbag();
+	
+			//bag = mapper.readValue(str.toString(), Stockbag.class);
+			
+	
+		//	System.out.println("open"+bag.stocklist.get(0).getOpen());
+			
+		}catch(Exception e) {
+		e.printStackTrace();
+		}
+		
+		
+
+	}
+
+}

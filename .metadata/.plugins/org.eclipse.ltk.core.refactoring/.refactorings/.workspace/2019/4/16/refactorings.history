@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Historical Stock Data Analysis&apos;" deleteContents="false" description="Delete resource &apos;Historical Stock Data Analysis&apos;" element1="/Historical Stock Data Analysis" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1555717507257"/>&#x0A;<refactoring comment="Delete resource &apos;Historical Stock Data Analysis Project&apos;" deleteContents="true" description="Delete resource &apos;Historical Stock Data Analysis Project&apos;" element1="/Historical Stock Data Analysis Project" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1555718088510"/>
+</session>
