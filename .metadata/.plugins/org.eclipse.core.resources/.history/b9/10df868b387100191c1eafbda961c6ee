@@ -12,7 +12,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 public class Main {
-	//checking if git works
 
 	public static void main(String[] args) {
 		Stockbag bag=new Stockbag();
