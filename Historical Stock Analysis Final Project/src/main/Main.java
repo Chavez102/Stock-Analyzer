@@ -23,7 +23,7 @@ public class Main {
 
 		Stockbag bag=new Stockbag();
 		DoublyLinkedList Linklist=new DoublyLinkedList();
-		String str=GetJsonString("TSLA");
+		String Jsonstr=GetJsonString("TSLA");
 		
 		
 		//System.out.println(str);
@@ -32,7 +32,7 @@ public class Main {
 		
 		try {
 				ObjectMapper mapper=new ObjectMapper();
-				bag = mapper.readValue(str.toString(), Stockbag.class);
+				bag = mapper.readValue(Jsonstr.toString(), Stockbag.class);
 		} catch (Exception e) {
 										// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -54,6 +54,7 @@ public class Main {
 		}
 		
 		System.out.println(map.size());
+		System.out.println(map.get(1).Stringdate);
 		
 		
 		//Linklist.displayForward();

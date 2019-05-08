@@ -1,0 +1,30 @@
+package application;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+
+public class Main_Page_Controller {
+	@FXML
+    private Button Amazon_Btn;
+
+    @FXML
+    private ImageView Amazon_btn;
+
+    @FXML
+    private ImageView Tesla_btn;
+
+    @FXML
+    void Tesla_btn_Clicked(MouseEvent event) {
+    	
+    	System.out.println("Tesla Button Clicked");
+    }
+
+    @FXML
+    void amazon_btn_Clicked(MouseEvent event) {
+    	System.out.println("Tesla Button Clicked");
+
+    }
+
+}
