@@ -58,23 +58,14 @@ public class Menu_Page_Controller implements Initializable{
     @FXML
     void Range_btn_Clicked(ActionEvent event) {
 
-    	
-    	
     }
 
  
 
     @FXML
     void back_btn_Clicked(ActionEvent event) {
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-
+    	System.out.println("hello");
+    	Main.SwitchPageto(event,"Main_Page.fxml");
     }
     
 
