@@ -1,8 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Menu_Page_Controller">
+   <children>
+      <Text fx:id="Title_text" layoutX="106.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What woulld you like to do with Company's Stock" wrappingWidth="583.8672180175781">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Button fx:id="Search_btn" layoutX="106.0" layoutY="193.0" mnemonicParsing="false" onAction="#Search_btn_Clicked" prefHeight="90.0" prefWidth="179.0" text="Search">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="Add_New_Stock_btn" layoutX="510.0" layoutY="193.0" mnemonicParsing="false" onAction="#Add_New_Stock_btn_Clicked" prefHeight="90.0" prefWidth="179.0" text="Add New Stock">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="Range_btn" layoutX="106.0" layoutY="349.0" mnemonicParsing="false" onAction="#Range_btn_Clicked" prefHeight="90.0" prefWidth="179.0" text=" Search for a specific range " wrapText="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="Graphing_btn" layoutX="510.0" layoutY="349.0" mnemonicParsing="false" onAction="#Graphing_btn_Clicked" prefHeight="90.0" prefWidth="179.0" text="Graphing" wrapText="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="back_btn" layoutX="46.0" layoutY="40.0" mnemonicParsing="false" onAction="#back_btn_Clicked" prefHeight="39.0" prefWidth="69.0" text="Back">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
-
