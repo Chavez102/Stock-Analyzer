@@ -65,7 +65,7 @@ public class Menu_Page_Controller implements Initializable{
     @FXML
     void back_btn_Clicked(ActionEvent event) {
     	
-    	Main.SwitchPageto(event, "Main_Page.fxml");
+    	
 
     }
     

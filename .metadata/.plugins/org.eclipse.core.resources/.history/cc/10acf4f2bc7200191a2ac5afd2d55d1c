@@ -42,9 +42,18 @@ public class Main_Page_Controller {
 	    	Main.SwitchPageto(event,"Menu_Page.fxml");
 	    }
 	    
-
 	    
-	    
-	    
+//		public static void SwitchPageto(ActionEvent event,String fxmldocument) {
+//			try {
+//			Parent root = FXMLLoader.load(application.Main.class.getResource("Menu_Page.fxml")); 
+//			Scene scene = new Scene(root,841,698);
+//			Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+//			window.setScene(scene);
+//			window.show();
+//			
+//			
+//			
+//			}catch(Exception e) { e.printStackTrace();}
+//		}
 		
 }
