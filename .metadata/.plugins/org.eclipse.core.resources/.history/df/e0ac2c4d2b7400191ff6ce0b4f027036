@@ -15,7 +15,7 @@ import javafx.scene.text.Text;
 
 public class AddStock_Page_Controller implements Initializable {
 
-	
+
   
     @FXML
     private DatePicker Date_DatePicker;
@@ -68,7 +68,7 @@ public class AddStock_Page_Controller implements Initializable {
 	    	CheckforValidInput(ClosePrice_Textfield,CloseWarning_Text)
     	)
     	{
-    	 	
+    	 	Search_Page_Controller.DateString=datepickeranswer;
     	 	
     	 	Stock newStock=new Stock(
     	 			datepickeranswer,
@@ -79,14 +79,6 @@ public class AddStock_Page_Controller implements Initializable {
     	 			Volume_Textfield.getText()
     	 			);
     	 	
-    	 	
-    	 	
-    	 	
-    	 	
-    	 	
-    	 	
-    	 	 Search_Result_Page_Controller.Gobackto="AddStock_Page.fxml";
-    	 	Search_Page_Controller.DateString=datepickeranswer;
     	 	application.Main.map.put(datepickeranswer, newStock);
     	 	
     	 	

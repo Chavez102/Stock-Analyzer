@@ -14,10 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
 public class Search_Result_Page_Controller implements Initializable{
-	
-	public static String Gobackto="";
-	
-	
+
     @FXML
     private Text Date_text;
     @FXML
@@ -78,9 +75,7 @@ public class Search_Result_Page_Controller implements Initializable{
 
     @FXML
     void back_btn_Clicked(ActionEvent event) {
-    	
-    	
-    	Main.SwitchPageto(event,Gobackto );
+    	Main.SwitchPageto(event, "Search_Page.fxml");
     }
 
 

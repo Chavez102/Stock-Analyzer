@@ -27,7 +27,7 @@ public class Stock {
 	double high;
 	double low;
 	double close;
-	int volume;
+	double volume;
 	public Stock() {}
 	
 	public Stock(String stringdate,String stringopen, String stringhigh,String stringlow,String stringclose,String stringvolume) {
@@ -42,7 +42,7 @@ public class Stock {
 		this.high=Double.valueOf(stringhigh);
 		this.low=Double.valueOf(stringlow);
 		this.close=Double.valueOf(stringclose);
-		this.volume=Integer.valueOf(stringvolume);
+		this.volume=Double.valueOf(stringvolume);
 		
 	}
 	
@@ -148,10 +148,10 @@ public class Stock {
 	public void setClose(double close) {
 		this.close = close;
 	}
-	public int getVolume() {
+	public double getVolume() {
 		return volume;
 	}
-	public void setVolume(int volume) {
+	public void setVolume(double volume) {
 		this.volume = volume;
 	}
 	

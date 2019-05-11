@@ -148,10 +148,10 @@ public class Stock {
 	public void setClose(double close) {
 		this.close = close;
 	}
-	public int getVolume() {
+	public double getVolume() {
 		return volume;
 	}
-	public void setVolume(int volume) {
+	public void setVolume(double volume) {
 		this.volume = volume;
 	}
 	

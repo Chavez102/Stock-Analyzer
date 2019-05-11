@@ -85,7 +85,7 @@ public class AddStock_Page_Controller implements Initializable {
     	 	
     	 	
     	 	
-    	 	 Search_Result_Page_Controller.Gobackto="AddStock_Page.fxml";
+    	 	 Search_Result_Page_Controller.Gobackto="Search_Page.fxml";
     	 	Search_Page_Controller.DateString=datepickeranswer;
     	 	application.Main.map.put(datepickeranswer, newStock);
     	 	

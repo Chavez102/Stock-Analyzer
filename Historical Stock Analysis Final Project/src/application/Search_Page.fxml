@@ -59,7 +59,7 @@
          </graphic>
       </Button>
       <Button fx:id="back_btn" layoutX="34.0" layoutY="95.0" mnemonicParsing="false" onAction="#back_btn_Clicked" prefHeight="40.0" prefWidth="80.0" text="Back" />
-      <Text fx:id="Warning_Text" layoutX="634.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="selected Date is before Stock Went public" wrappingWidth="127.4410400390625" />
+      <Text fx:id="Warning_Text" layoutX="634.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="selected Date is before Stock Went public" visible="false" wrappingWidth="127.4410400390625" />
       <Text fx:id="Went_Public_Text" layoutX="294.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company's went Public on" />
    </children>
 </AnchorPane>

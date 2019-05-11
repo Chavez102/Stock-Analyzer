@@ -4,7 +4,6 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-import Data_Management.Stock;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,7 +14,7 @@ import javafx.scene.text.Text;
 
 public class AddStock_Page_Controller implements Initializable {
 
-	
+
   
     @FXML
     private DatePicker Date_DatePicker;
@@ -60,41 +59,16 @@ public class AddStock_Page_Controller implements Initializable {
     	String datepickeranswer=localdate.toString();
 
     	
-    	if(
-	    	CheckforValidInput(OpenPrice_Textfield,OpenPriceWarning_Text)&&
-	    	CheckforValidInput(HighPrice_Textfield,HighPriceWarning_Text)&&
-	    	CheckforValidInput(LowPrice_Textfield,LowPriceWarning_Text)&&
-	    	CheckforValidInput(Volume_Textfield,VolumeWarning_Text)&&
-	    	CheckforValidInput(ClosePrice_Textfield,CloseWarning_Text)
-    	)
-    	{
-    	 	
-    	 	
-    	 	Stock newStock=new Stock(
-    	 			datepickeranswer,
-    	 			OpenPrice_Textfield.getText(),
-    	 			HighPrice_Textfield.getText(),
-    	 			LowPrice_Textfield.getText(),
-    	 			ClosePrice_Textfield.getText(),
-    	 			Volume_Textfield.getText()
-    	 			);
-    	 	
-    	 	
-    	 	
-    	 	
-    	 	
-    	 	
-    	 	
-    	 	 Search_Result_Page_Controller.Gobackto="AddStock_Page.fxml";
-    	 	Search_Page_Controller.DateString=datepickeranswer;
-    	 	application.Main.map.put(datepickeranswer, newStock);
-    	 	
-    	 	
-        	application.Main.SwitchPageto(event, "Search_Result_Page.fxml");
-    	}
+
+    	CheckforValidInput(OpenPrice_Textfield,OpenPriceWarning_Text);
+    	CheckforValidInput(HighPrice_Textfield,HighPriceWarning_Text);
+    	CheckforValidInput(LowPrice_Textfield,LowPriceWarning_Text);
+    	CheckforValidInput(Volume_Textfield,VolumeWarning_Text);
+    	CheckforValidInput(ClosePrice_Textfield,CloseWarning_Text);
     	
     	
-   
+    	Search_Page_Controller.DateString=datepickeranswer;
+    	application.Main.SwitchPageto(event, "Search_Result_Page.fxml");
     	
     }
     
@@ -103,19 +77,15 @@ public class AddStock_Page_Controller implements Initializable {
     
     
     
-    public boolean CheckforValidInput(TextField textfield,Text warningtext)
+    public void CheckforValidInput(TextField textfield,Text warningtext)
     {
     	if (!isNumeric(textfield.getText()))
     	{
     		warningtext.setText("Invalid Answer");
     		warningtext.setVisible(true);
-    		return false;
     		
     	}
-    	else { 
-    		warningtext.setVisible(false);
-    		return true;
-    	}
+    	else warningtext.setVisible(false);
     }
     
  
