@@ -15,7 +15,8 @@ import javafx.scene.text.Text;
 public class AddStock_Page_Controller implements Initializable {
 
 
-  
+    @FXML
+    private Text Warning_Text;
     @FXML
     private DatePicker Date_DatePicker;
     @FXML

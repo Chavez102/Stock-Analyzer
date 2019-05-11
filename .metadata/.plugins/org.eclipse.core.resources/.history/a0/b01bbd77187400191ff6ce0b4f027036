@@ -15,7 +15,8 @@ import javafx.scene.text.Text;
 public class AddStock_Page_Controller implements Initializable {
 
 
-  
+    @FXML
+    private Text Warning_Text;
     @FXML
     private DatePicker Date_DatePicker;
     @FXML
@@ -72,18 +73,6 @@ public class AddStock_Page_Controller implements Initializable {
 //    	}
 //    	else OpenPriceWarning_Text.setVisible(false);
     	CheckforValidInput(OpenPrice_Textfield,OpenPriceWarning_Text);
-    	CheckforValidInput(HighPrice_Textfield,HighPriceWarning_Text);
-    	CheckforValidInput(LowPrice_Textfield,LowPriceWarning_Text);
-    	CheckforValidInput(Volume_Textfield,VolumeWarning_Text);
-    	CheckforValidInput(ClosePrice_Textfield,CloseWarning_Text);
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
     	
     	System.out.println("datepickeranswer:"+datepickeranswer);
     	System.out.println("OpenPriceAnser:"+OpenPriceAnswer);

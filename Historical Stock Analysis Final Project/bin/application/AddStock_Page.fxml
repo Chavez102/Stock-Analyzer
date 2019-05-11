@@ -47,12 +47,11 @@
             <Text fx:id="OpenPriceWarning_Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Text fx:id="HighPriceWarning_Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Text fx:id="LowPriceWarning_Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Text fx:id="VolumeWarning_Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="22.13671875" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Text fx:id="VolumeWarning_Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <Text fx:id="CloseWarning_Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
          </children>
       </GridPane>
       <Button fx:id="Back_btn" layoutX="66.0" layoutY="90.0" mnemonicParsing="false" onAction="#Back_btn_Clicked" text="Back" />
       <Button fx:id="Add_btn" layoutX="507.0" layoutY="409.0" mnemonicParsing="false" onAction="#Add_btn_Clicked" text="Add" />
-      <Text fx:id="Warning_Text" layoutX="397.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warning" />
    </children>
 </AnchorPane>
