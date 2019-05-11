@@ -31,7 +31,7 @@
          <graphic>
             <ImageView fitHeight="187.0" fitWidth="215.0">
                <image>
-                  <Image url="@../../../../../Tesla-logo-2003-2500x2500.png" />
+                  <Image url="@../../Photos_and_GIFS/Tesla-logo-2003-2500x2500.png" />
                </image>
             </ImageView>
          </graphic>
@@ -51,9 +51,9 @@
             </Menu>
         </menus>
       </MenuBar>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="477.0">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="311.0" layoutY="455.0">
          <image>
-            <Image url="@../../../../../giphy.gif" />
+            <Image url="@../../Photos_and_GIFS/giphy.gif" />
          </image>
       </ImageView>
    </children>
