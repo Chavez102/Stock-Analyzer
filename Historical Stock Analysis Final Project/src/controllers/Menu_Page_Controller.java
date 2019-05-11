@@ -1,8 +1,10 @@
 package controllers;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
+import Data_Management.Stock;
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,9 +33,11 @@ public class Menu_Page_Controller implements Initializable{
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
 
    	 Title_text.setText("What would you like to do with "+application.Main.Stock_name+"'s Stock");
+   	 
+
+   	 
 
 	}
     
@@ -41,7 +45,7 @@ public class Menu_Page_Controller implements Initializable{
     
     @FXML
     void Search_btn_Clicked(ActionEvent event) {
-
+    	Main.SwitchPageto(event, "Search_Page.fxml");
 
     }
     

@@ -1,0 +1,28 @@
+package controllers;
+
+import javafx.fxml.FXML;
+import javafx.scene.text.Text;
+
+public class Search_Result_Page_Controller {
+
+    @FXML
+    private Text Date_text;
+
+    @FXML
+    private Text OpenAnswer_Text;
+
+    @FXML
+    private Text HighAnswer_Text;
+
+    @FXML
+    private Text LowAnswer_text;
+
+    @FXML
+    private Text VolumeAnswer_Text;
+
+    @FXML
+    private Text CloseAnswer_Text;
+    
+    
+
+}

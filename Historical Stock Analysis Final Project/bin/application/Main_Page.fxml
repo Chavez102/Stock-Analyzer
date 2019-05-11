@@ -51,5 +51,10 @@
             </Menu>
         </menus>
       </MenuBar>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="477.0">
+         <image>
+            <Image url="@../../../../../giphy.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

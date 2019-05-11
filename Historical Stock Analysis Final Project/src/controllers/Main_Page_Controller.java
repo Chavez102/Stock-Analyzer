@@ -17,7 +17,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class Main_Page_Controller {
+public class Main_Page_Controller{
 
 	    @FXML
 	    private Button Amazon_btn;
@@ -28,6 +28,12 @@ public class Main_Page_Controller {
 	    @FXML
 	    void Tesla_btn_Clicked(ActionEvent event) throws IOException {
 	    	application.Main.Stock_name="Tesla";
+	    	application.Main.Stock_symbol="TSLA";
+	    	
+
+	      	 application.Main.map= Data_Management.Main_Data_Management.getBagFor(application.Main.Stock_symbol);
+	      	 
+	      	 
 	    	
 	    	Main.SwitchPageto(event,"Menu_Page.fxml");
 	    }
@@ -38,6 +44,10 @@ public class Main_Page_Controller {
 	    void amazon_btn_Clicked(ActionEvent event) {
 	    	
 	    	application.Main.Stock_name="Amazon";
+	    	application.Main.Stock_symbol="AMZN";
+
+	      	 application.Main.map= Data_Management.Main_Data_Management.getBagFor(application.Main.Stock_symbol);
+	      	 
 	    	
 	    	Main.SwitchPageto(event,"Menu_Page.fxml");
 	    }

@@ -1,0 +1,5 @@
+package controllers;
+
+public class Search_Result_Page_Controller {
+
+}

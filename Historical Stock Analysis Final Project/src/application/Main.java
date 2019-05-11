@@ -1,5 +1,8 @@
 package application;
 	
+import java.util.HashMap;
+
+import Data_Management.Stock;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
@@ -12,15 +15,13 @@ import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
 	public static String Stock_name="name of stock";
-	
-	
+	public static String Stock_symbol="symbol of stock";
+	public static HashMap<String,Stock> map;
 	
 	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			
-			
 			
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Main_Page.fxml"));
 			Scene scene = new Scene(root,841,698);
@@ -28,13 +29,10 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			
 			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
+			
+			
+		} catch(Exception e) {e.printStackTrace();}
 	
-		
-		
-		
 	}
 	
 	public static void main(String[] args) {
@@ -51,19 +49,8 @@ public class Main extends Application {
 			Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
 			window.setScene(scene);
 			window.show();
-			
-			
-			
 			}catch(Exception e) { e.printStackTrace();}
-			
-			
-			
-			
-			
-			
-			
-		
-			
+				
 	}
 	
 	
