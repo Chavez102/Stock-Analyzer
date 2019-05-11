@@ -53,6 +53,10 @@ public class Menu_Page_Controller implements Initializable{
     void Graphing_btn_Clicked(ActionEvent event) {
 
     }
+
+    
+    
+    
     @FXML
     void Range_btn_Clicked(ActionEvent event) 
     {

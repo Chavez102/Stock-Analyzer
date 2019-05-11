@@ -56,7 +56,6 @@ public class AddStock_Page_Controller implements Initializable {
     
     @FXML
     void Add_btn_Clicked(ActionEvent event) {
-    	
     	LocalDate localdate=Date_DatePicker.getValue();
     	String datepickeranswer=localdate.toString();
 
@@ -79,6 +78,9 @@ public class AddStock_Page_Controller implements Initializable {
     	 			ClosePrice_Textfield.getText(),
     	 			Volume_Textfield.getText()
     	 			);
+    	 	
+    	 	
+    	 	
     	 	
     	 	
     	 	
