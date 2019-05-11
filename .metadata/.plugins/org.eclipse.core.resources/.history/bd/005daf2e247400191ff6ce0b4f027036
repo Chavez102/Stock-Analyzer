@@ -66,10 +66,6 @@ public class AddStock_Page_Controller implements Initializable {
     	CheckforValidInput(Volume_Textfield,VolumeWarning_Text);
     	CheckforValidInput(ClosePrice_Textfield,CloseWarning_Text);
     	
-    	
-    	
-    	application.Main.SwitchPageto(event, "Search_Result_Page.fxml");
-    	
     }
     
     

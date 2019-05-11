@@ -36,7 +36,11 @@ public class Search_Result_Page_Controller implements Initializable{
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		String datestr=Search_Page_Controller.DateString;		
+		String datestr=Search_Page_Controller.DateString;
+//			System.out.println("Date:"+datestr);
+//			System.out.println(application.Main.map.get(datestr).getWeekDay());
+//			System.out.println("Open:"+application.Main.map.get(datestr).getOpen());
+			
 			Date_text.setText(application.Main.map.get(datestr).getDate());
 			
 			
