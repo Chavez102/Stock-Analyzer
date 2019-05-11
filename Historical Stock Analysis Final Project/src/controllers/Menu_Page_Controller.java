@@ -36,13 +36,7 @@ public class Menu_Page_Controller implements Initializable{
 
    	 Title_text.setText("What would you like to do with "+application.Main.Stock_name+"'s Stock");
    	 
-
-   	 
-
 	}
-    
-    
-    
     @FXML
     void Search_btn_Clicked(ActionEvent event) {
     	Main.SwitchPageto(event, "Search_Page.fxml");
@@ -51,6 +45,7 @@ public class Menu_Page_Controller implements Initializable{
     
     @FXML
     void Add_New_Stock_btn_Clicked(ActionEvent event) {
+    	Main.SwitchPageto(event, "AddStock_Page.fxml");
 
     }
 

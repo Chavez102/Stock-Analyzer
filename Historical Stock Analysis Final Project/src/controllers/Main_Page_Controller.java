@@ -2,6 +2,9 @@ package controllers;
 import controllers.*;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import application.Main;
 import javafx.event.ActionEvent;
@@ -30,7 +33,10 @@ public class Main_Page_Controller{
 	    	application.Main.Stock_name="Tesla";
 	    	application.Main.Stock_symbol="TSLA";
 	    	
-
+	    	
+	    	
+	    	application.Main.Stock_Went_Public=application.Main.SetDate("2010-06-29",application.Main.Stock_Went_Public);		//sets when tsla went public
+	    	
 	      	 application.Main.map= Data_Management.Main_Data_Management.getBagFor(application.Main.Stock_symbol);
 	      	 
 	      	 
@@ -45,12 +51,18 @@ public class Main_Page_Controller{
 	    	
 	    	application.Main.Stock_name="Amazon";
 	    	application.Main.Stock_symbol="AMZN";
+	    	application.Main.Stock_Went_Public=application.Main.SetDate("1997-05-15",application.Main.Stock_Went_Public);		//sets when amazon went public
+	    	
 
 	      	 application.Main.map= Data_Management.Main_Data_Management.getBagFor(application.Main.Stock_symbol);
 	      	 
 	    	
 	    	Main.SwitchPageto(event,"Menu_Page.fxml");
 	    }
+	    
+	    
+	    
+
 	    
 
 	    

@@ -1,0 +1,5 @@
+package controllers;
+
+public class AddStock_Page_Controller {
+
+}

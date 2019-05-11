@@ -1,5 +1,8 @@
 package application;
 	
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 import Data_Management.Stock;
@@ -16,6 +19,7 @@ import javafx.fxml.FXMLLoader;
 public class Main extends Application {
 	public static String Stock_name="name of stock";
 	public static String Stock_symbol="symbol of stock";
+	public static Date Stock_Went_Public;
 	public static HashMap<String,Stock> map;
 	
 	
@@ -55,6 +59,17 @@ public class Main extends Application {
 				
 	}
 	
+	
+    public static Date SetDate(String strdate,Date date)
+    {
+    	SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+        	date= dateformat.parse(strdate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    	return date;
+    }
 	
 	
 	
