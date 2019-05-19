@@ -73,18 +73,16 @@ public class Search_Page_Controller implements Initializable{
 	    	 Search_Result_Page_Controller.Gobackto="Search_Page.fxml";
 	    	 
 	    	 
-	    	 
-	    	 
 	    	 }else {
 	    		 Warning_Text.setVisible(true);
 	    		 
 	    		 
-		    	 if (selected_Date.before(application.Main.Stock_Went_Public)) {
+		    	if (selected_Date.before(application.Main.Stock_Went_Public)) {
 		    		 Warning_Text.setText("selected Date is before Stock Went public");
 		    		 
 		    		System.out.println("selected Date is before Stock Went public"); 
 		    	 }
-		    	 else if (WeekDayChosen()==false){
+		    	 else if (WeekDayChosen(DateString)==false){
 		    		 Warning_Text.setText("Market is close on Weekends");
 		    		 System.out.println("Market is close on Weekends");
 		    	 }
@@ -97,10 +95,10 @@ public class Search_Page_Controller implements Initializable{
 	    	 
 	    }
 	    
-	    public boolean WeekDayChosen()
+	    public static boolean WeekDayChosen(String datestrchosen)
 	    {
 	    	  SimpleDateFormat dateformat2 = new SimpleDateFormat("yyyy-MM-dd");
-	          String strdate2 = DateString;
+	          String strdate2 = datestrchosen;
 	          Date newdate = null;
 	          
 	          try {
@@ -150,8 +148,6 @@ public class Search_Page_Controller implements Initializable{
 	    }
 
 
-
-		
 		
 		//fill integerchoicebox from firstnum to lastnum
 		public void fillChoicebox(int firstnum,int lastnum,ChoiceBox<Integer> choicebox) {
@@ -160,6 +156,8 @@ public class Search_Page_Controller implements Initializable{
 		    {
 		    	list.add(i);   
 		    }
+		    
+		    
 			choicebox.setValue(firstnum + (int)(Math.random() * ((lastnum - firstnum) + 1)));
 			choicebox.setItems(list);
 			

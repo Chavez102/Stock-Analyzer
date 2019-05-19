@@ -1,0 +1,45 @@
+package controllers;
+
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.XYChart;
+
+public class Graphing_Page_Controller implements Initializable {
+	public static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	@FXML
+	private LineChart<String, Number> Chart_LineChart;
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		Chart_LineChart.getData().clear();
+		XYChart.Series<String, Number> series = new XYChart.Series<String, Number>();
+		// stringdate
+		
+		
+		ArrayList<Date> dateRangelist = controllers.Range_Result_Page_Controller
+				.getDates(controllers.Range_Page_Controller.begin_date, controllers.Range_Page_Controller.End_date);
+
+		for (Date date : dateRangelist) {
+			String datestr = dateFormat.format(date);
+			if (application.Main.map.containsKey(datestr)) {
+				double avgPrice= (application.Main.map.get(datestr).getHigh()+application.Main.map.get(datestr).getLow())/2;
+				
+				
+				series.getData().add(new XYChart.Data<String,Number>(application.Main.map.get(datestr).getDate(),avgPrice));
+
+			}
+		}
+		series.setName("Price");
+		Chart_LineChart.getData().add(series);
+
+	}
+
+}

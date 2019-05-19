@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Range_Result_Page_Controller">
+   <children>
+      <Text layoutX="320.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Range Result">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Text>
+      <Button fx:id="Back_btn" layoutX="61.0" layoutY="78.0" mnemonicParsing="false" onAction="#Back_btn_Clicked" prefHeight="41.0" prefWidth="72.0" text="Back" />
+      <Text layoutX="325.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From" />
+      <Text layoutX="444.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To" />
+      <Button fx:id="Menu_btn" layoutX="725.0" layoutY="86.0" mnemonicParsing="false" onAction="#Menu_btn_Clicked" prefHeight="41.0" prefWidth="72.0" text="Menu" />
+      <TableView fx:id="Table_VIew" layoutX="49.0" layoutY="183.0" prefHeight="383.0" prefWidth="740.0">
+        <columns>
+          <TableColumn fx:id="Date_column" prefWidth="108.22225952148438" text="Date" />
+          <TableColumn fx:id="Open_column" prefWidth="151.1999969482422" text="Open" />
+            <TableColumn fx:id="High_column" minWidth="4.0" prefWidth="88.79998779296875" text="High" />
+            <TableColumn fx:id="Low_Column" prefWidth="113.5999755859375" text="Low" />
+            <TableColumn fx:id="Close_Column" prefWidth="151.20001220703125" text="Close" />
+            <TableColumn fx:id="Volume_column" prefWidth="127.20001220703125" text="Volume" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="244.0" layoutY="585.0" prefHeight="98.0" prefWidth="400.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.5999786376953" minWidth="10.0" prefWidth="432.5999786376953" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="663.4000396728516" minWidth="10.0" prefWidth="408.60002136230474" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Highest Price Within Range" wrappingWidth="195.48126220703125" />
+            <Text fx:id="Highest_RangePrice_Text" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lowest Price Within RAange" GridPane.rowIndex="1" />
+            <Text fx:id="Lowest_RangePrice_Text" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Average Price Within Range" GridPane.rowIndex="2" />
+            <Text fx:id="Average_RangePrice_Text" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

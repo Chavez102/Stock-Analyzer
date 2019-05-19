@@ -44,8 +44,6 @@ public class Main extends Application {
 		launch(args);
 	}
 
-	
-		
 		
 	public static void SwitchPageto(ActionEvent event,String fxmldocumentstr) {
 			try {

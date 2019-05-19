@@ -14,13 +14,13 @@ public class Test_Class {
 	    Date dt = new Date();
 	    //System.out.println(dt);
 
-	        List<Date> dates = getDates("2017-01-01",dateFormat.format(new Date()));
+	        List<Date> dates = getDates("2017-01-01",dateFormat.format(dt));
 	        //IF you don't want to reverse then remove Collections.reverse(dates);
-	         Collections.reverse(dates);
+	    //     Collections.reverse(dates);
 	    //    System.out.println(dates.size());
 	    for(Date date:dates)
 	    {
-	        System.out.println(date);
+	        System.out.println(dateFormat.format(date));
 	    }
 	 }
 	 
@@ -42,10 +42,7 @@ public class Test_Class {
 	        {
 	            dates.add(fromCal.getTime());
 	            fromCal.add(Calendar.DATE, 1);
-	        }
-
-
-	    } catch (Exception e) {
+	        }} catch (Exception e) {
 	        System.out.println(e);
 	    }
 	    return dates;

@@ -13,6 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
 public class Menu_Page_Controller implements Initializable{
+
+	
 	
 	@FXML
 	private Text Title_text;
@@ -49,14 +51,32 @@ public class Menu_Page_Controller implements Initializable{
 
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @FXML
     void Graphing_btn_Clicked(ActionEvent event) {
-
+  
+    	application.Main.SwitchPageto(event, "Range_Page.fxml");
     }
+    
+    
     @FXML
     void Range_btn_Clicked(ActionEvent event) 
     {
-    	System.out.println("hello");
+    	
+    	
+    	
+    	
+    	
     	application.Main.SwitchPageto(event, "Range_Page.fxml");
     	
     

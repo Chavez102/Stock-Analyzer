@@ -1,0 +1,84 @@
+package controllers;
+
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
+
+public class Range_Result_Page_Controller implements Initializable{
+
+    @FXML
+    private Button Back_btn;
+
+    @FXML
+    private Button Menu_btn;
+
+    @FXML
+    private TableView<?> Table_VIew;
+
+
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) 
+	{
+		controllers.Range_Page_Controller
+		
+		
+		
+		
+
+	}
+	
+	
+	public static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    public static ArrayList<Date> getDates(String fromDate, String toDate)				//Gets Range from-to
+	 {
+	    ArrayList<Date> dates = new ArrayList<Date>();
+
+	    try {
+
+	        Calendar fromCal = Calendar.getInstance();
+	        fromCal.setTime(dateFormat .parse(fromDate));
+
+	        Calendar toCal = Calendar.getInstance();
+	        toCal.setTime(dateFormat .parse(toDate));
+
+	        while(!fromCal.after(toCal))
+	        {
+	            dates.add(fromCal.getTime());
+	            fromCal.add(Calendar.DATE, 1);
+	        }} catch (Exception e) {
+	        System.out.println(e);
+	    }
+	    return dates;
+	 }
+	
+	
+	
+    @FXML
+    void Back_btn_Clicked(ActionEvent event) 
+    {
+    	application.Main.SwitchPageto(event, "Range_Page.fxml");
+    	
+    }
+
+    @FXML
+    void Menu_btn_Clicked(ActionEvent event) {
+    	
+    	
+     	application.Main.SwitchPageto(event, "Menu_Page.fxml");
+    }
+	
+	
+	
+	
+
+}

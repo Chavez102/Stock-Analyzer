@@ -32,12 +32,16 @@ public class Stock {
 	
 	public Stock(String stringdate,String stringopen, String stringhigh,String stringlow,String stringclose,String stringvolume) {
 		this.Stringdate=stringdate;
+		
 		 SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
 	        try {
+	        	
 	            this.date = dateformat.parse(stringdate);
 	        } catch (ParseException e) {
 	            e.printStackTrace();
 	        }
+	        
+	        
 		this.open=Double.valueOf(stringopen);
 		this.high=Double.valueOf(stringhigh);
 		this.low=Double.valueOf(stringlow);

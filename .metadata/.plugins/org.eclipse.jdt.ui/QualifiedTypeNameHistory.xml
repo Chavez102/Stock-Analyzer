@@ -17,7 +17,6 @@
 <fullyQualifiedTypeName name="javafx.scene.Parent"/>
 <fullyQualifiedTypeName name="javafx.scene.Node"/>
 <fullyQualifiedTypeName name="controllers.Main_Page_Controller"/>
-<fullyQualifiedTypeName name="controllers.Menu_Page_Controller"/>
 <fullyQualifiedTypeName name="javafx.scene.control.ChoiceBox"/>
 <fullyQualifiedTypeName name="javafx.fxml.FXML"/>
 <fullyQualifiedTypeName name="javafx.scene.control.Button"/>
@@ -30,11 +29,19 @@
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.text.ParseException"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="controllers.Search_Page_Controller"/>
-<fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
-<fullyQualifiedTypeName name="javafx.scene.text.Text"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
-<fullyQualifiedTypeName name="javafx.fxml.Initializable"/>
-<fullyQualifiedTypeName name="application.Main"/>
+<fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+<fullyQualifiedTypeName name="controllers.Search_Page_Controller"/>
 <fullyQualifiedTypeName name="Data_Management.Stock"/>
+<fullyQualifiedTypeName name="javafx.scene.control.TableColumn"/>
+<fullyQualifiedTypeName name="javafx.scene.control.cell.PropertyValueFactory"/>
+<fullyQualifiedTypeName name="javafx.scene.text.Text"/>
+<fullyQualifiedTypeName name="javafx.fxml.Initializable"/>
+<fullyQualifiedTypeName name="javafx.scene.chart.XYChart"/>
+<fullyQualifiedTypeName name="javafx.scene.chart.XYChart.Series"/>
+<fullyQualifiedTypeName name="controllers.Menu_Page_Controller"/>
+<fullyQualifiedTypeName name="controllers.Range_Page_Controller"/>
+<fullyQualifiedTypeName name="controllers.Range_Result_Page_Controller"/>
+<fullyQualifiedTypeName name="javafx.scene.chart.XYChart.Data"/>
+<fullyQualifiedTypeName name="application.Main"/>
 </qualifiedTypeNameHistroy>
