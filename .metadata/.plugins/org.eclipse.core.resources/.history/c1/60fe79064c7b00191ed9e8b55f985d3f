@@ -52,6 +52,9 @@ public class Range_Page_Controller implements Initializable{
     }
     
     
+    
+    
+    
     @FXML
     void Back_btn_Clicked(ActionEvent event) 
     {

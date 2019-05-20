@@ -19,7 +19,6 @@
 <fullyQualifiedTypeName name="controllers.Main_Page_Controller"/>
 <fullyQualifiedTypeName name="javafx.scene.control.ChoiceBox"/>
 <fullyQualifiedTypeName name="javafx.fxml.FXML"/>
-<fullyQualifiedTypeName name="javafx.scene.control.Button"/>
 <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
 <fullyQualifiedTypeName name="javafx.collections.ObservableList"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
@@ -30,7 +29,6 @@
 <fullyQualifiedTypeName name="java.text.ParseException"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
-<fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
 <fullyQualifiedTypeName name="controllers.Search_Page_Controller"/>
 <fullyQualifiedTypeName name="Data_Management.Stock"/>
 <fullyQualifiedTypeName name="javafx.scene.control.TableColumn"/>
@@ -43,5 +41,8 @@
 <fullyQualifiedTypeName name="controllers.Range_Page_Controller"/>
 <fullyQualifiedTypeName name="controllers.Range_Result_Page_Controller"/>
 <fullyQualifiedTypeName name="javafx.scene.chart.XYChart.Data"/>
+<fullyQualifiedTypeName name="javafx.scene.chart.NumberAxis"/>
+<fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+<fullyQualifiedTypeName name="javafx.scene.control.Button"/>
 <fullyQualifiedTypeName name="application.Main"/>
 </qualifiedTypeNameHistroy>
