@@ -26,6 +26,8 @@ public class Graphing_Page_Controller implements Initializable {
 
     @FXML
     private Button Home_btn;
+
+
     @FXML
     void Home_btn_Clicked(ActionEvent event) {
     	
@@ -71,6 +73,10 @@ public class Graphing_Page_Controller implements Initializable {
 				  {
 					  highest=application.Main.map.get(datestr).getHigh();
 				  }
+				
+				
+				
+				
 				double avgPrice= (application.Main.map.get(datestr).getHigh()+application.Main.map.get(datestr).getLow())/2;
 
 				series.getData().add(new XYChart.Data<String,Number>(application.Main.map.get(datestr).getDate(),avgPrice));

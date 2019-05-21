@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Graphing_Page_Controller">
    <children>
-      <LineChart fx:id="Chart_LineChart" layoutX="133.0" layoutY="123.0" prefHeight="470.0" prefWidth="574.0" title="Data History">
+      <LineChart fx:id="Chart_LineChart" layoutX="73.0" layoutY="123.0" prefHeight="551.0" prefWidth="674.0" title="Data History">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
@@ -16,7 +16,7 @@
           <NumberAxis fx:id="Y_axis" label="Price " side="LEFT" upperBound="200.0" />
         </yAxis>
       </LineChart>
-      <Button fx:id="back_btn" layoutX="54.0" layoutY="79.0" mnemonicParsing="false" onAction="#back_btn_Clicked" prefHeight="44.0" prefWidth="78.0" text="Back" />
-      <Button fx:id="Home_btn" layoutX="684.0" layoutY="79.0" mnemonicParsing="false" onAction="#Home_btn_Clicked" prefHeight="44.0" prefWidth="78.0" text="Home" />
+      <Button fx:id="back_btn" layoutX="54.0" layoutY="57.0" mnemonicParsing="false" onAction="#back_btn_Clicked" prefHeight="44.0" prefWidth="78.0" text="Back" />
+      <Button fx:id="Home_btn" layoutX="699.0" layoutY="57.0" mnemonicParsing="false" onAction="#Home_btn_Clicked" prefHeight="44.0" prefWidth="78.0" text="Home" />
    </children>
 </AnchorPane>

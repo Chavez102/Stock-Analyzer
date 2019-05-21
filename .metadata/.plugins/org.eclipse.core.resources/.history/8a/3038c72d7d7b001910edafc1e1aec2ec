@@ -26,6 +26,8 @@ public class Graphing_Page_Controller implements Initializable {
 
     @FXML
     private Button Home_btn;
+
+
     @FXML
     void Home_btn_Clicked(ActionEvent event) {
     	

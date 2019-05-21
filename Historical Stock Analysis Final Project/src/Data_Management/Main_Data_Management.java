@@ -21,11 +21,11 @@ public class Main_Data_Management {
 	
 	
 	
-	public static void main(String[] args) {
-		HashMap<String,Stock> map= getBagFor("TSLA");
-		
-		
-	}
+//	public static void main(String[] args) {
+//		HashMap<String,Stock> map= getBagFor("TSLA");
+//		
+//		
+//	}
 	
 	
 	

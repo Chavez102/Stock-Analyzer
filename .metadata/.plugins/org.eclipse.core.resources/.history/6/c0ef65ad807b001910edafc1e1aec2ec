@@ -33,8 +33,6 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Final Project");
 			
-			
-			primaryStage.setResizable(false);
 			primaryStage.show();
 			
 			
