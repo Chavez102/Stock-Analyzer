@@ -53,6 +53,13 @@
       <Button fx:id="Back_btn" layoutX="72.0" layoutY="94.0" mnemonicParsing="false" onAction="#Back_btn_Clicked" prefHeight="42.0" prefWidth="65.0" text="Back" />
       <Text fx:id="Warning_Text" layoutX="417.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warning" visible="false" />
       <Text layoutX="231.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Data" />
-      <Button fx:id="Graph_btn" layoutX="576.0" layoutY="413.0" mnemonicParsing="false" onAction="#Graph_btn_Clicked" prefHeight="70.0" prefWidth="87.0" text="Graph It" />
+      <Button fx:id="Graph_btn" layoutX="576.0" layoutY="413.0" mnemonicParsing="false" onAction="#Graph_btn_Clicked" prefHeight="57.0" prefWidth="64.0">
+         <graphic>
+            <ImageView fitHeight="77.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Photos_and_GIFS/Graph-PNG-Photo.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
    </children>
 </AnchorPane>

@@ -69,7 +69,7 @@ public class Main_Data_Management {
 	
 		try {
 			String symbol=Stocksymbol;	//options Any stock's symbol 
-//   https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=TSLA&interval=5min&apikey=AJTUPL59H6NMOMYH&outputsize=full
+//   https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=TSLA&interval=5min&apikey=AJTUPL59H6NMOMYH&outputsize=compact
 			String url="https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+symbol+
 			"&interval=5min&apikey="+key+ 
 			"&outputsize=full";
